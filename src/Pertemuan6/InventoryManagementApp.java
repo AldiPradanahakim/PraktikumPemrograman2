@@ -12,7 +12,7 @@ public class InventoryManagementApp extends JFrame {
     private JTextField tfCode, tfName, tfOtherCategory;
     private JTextArea taDescription;
     private JRadioButton rbElectronics, rbClothing, rbOther;
-    private JCheckBox cbNeedsInspection;
+    private JCheckBox cbNeedsInspection; 
     private JComboBox<String> cbSupplier;
     private JList<String> listItems;
     private JSlider sliderMinStock;
