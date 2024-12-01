@@ -4,7 +4,7 @@
  */
 package Pertemuan7.InvetoryManagement.src.dao;
 
-import Pertemuan7.InvetoryManagement.src.db.DatabaseConnection;
+import Pertemuan7.InvetoryManagement.src.db.MySqlConnection;
 import Pertemuan7.InvetoryManagement.src.model.InventoryItem;
 
 import java.sql.*;
@@ -14,7 +14,7 @@ import java.util.List;
 public class InventoryDAO {
     public void addInventoryItem(InventoryItem item) throws SQLException {
         String query = "INSERT INTO inventory (code, name, description, category, supplier, quantity) VALUES (?, ?, ?, ?, ?, ?)";
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = MySqlConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, item.getCode());
             stmt.setString(2, item.getName());
@@ -29,7 +29,7 @@ public class InventoryDAO {
     public List<InventoryItem> getAllInventoryItems() throws SQLException {
         List<InventoryItem> items = new ArrayList<>();
         String query = "SELECT * FROM inventory";
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = MySqlConnection.getConnection();
              Statement stmt = conn.createStatement();
              ResultSet rs = stmt.executeQuery(query)) {
             while (rs.next()) {
@@ -49,7 +49,7 @@ public class InventoryDAO {
 
     public void deleteInventoryItem(String code) throws SQLException {
         String query = "DELETE FROM inventory WHERE code = ?";
-        try (Connection conn = DatabaseConnection.getConnection();
+        try (Connection conn = MySqlConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setString(1, code);
             stmt.executeUpdate();
