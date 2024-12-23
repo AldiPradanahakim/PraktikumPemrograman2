@@ -28,3 +28,12 @@ bin/
 ### Mac OS ###
 .DS_Store
 /build/
+/src/Pertemuan8/MembershipORM/MembershipORM/build/
+/Praktikum_pemrograman2/nbproject/private/
+/Praktikum_pemrograman2/build/
+/src/Pertemuan11/JavaApplication4/nbproject/private/
+/src/Pertemuan11/jfc-mvc/nbproject/private/
+/src/Pertemuan11/ManajemenBuku/JavaApplication5/nbproject/private/
+/src/Pertemuan11/ManajemenBuku/ManajemenBuku/nbproject/private/
+/src/Pertemuan11/ManajemenBuku/JavaApplication6/nbproject/private/
+/src/Pertemuan11/ManajemenBuku/JavaApplication6/build/
